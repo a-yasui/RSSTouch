@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import Fuzi
 
 class RSSThread: NSObject, XMLParserDelegate {
     
@@ -20,18 +21,43 @@ class RSSThread: NSObject, XMLParserDelegate {
     
     func parse (url: URL)
     {
-        let parser: XMLParser? = XMLParser(contentsOf: url)
+        let request = NSMutableURLRequest(url: url)
         
-        if ((parser) != nil){
-            parser?.delegate = self
+        // set the method(HTTP-GET)
+        request.httpMethod = "GET"
+        
+        // use NSURLSessionDataTask
+        let task = URLSession.shared.dataTask(with: request as URLRequest, completionHandler: { data, response, error in
+            if (error == nil) {
+                let result: String = String(data: data!, encoding: String.Encoding(rawValue: String.Encoding.utf8.rawValue))!
+                print(result)
+                
+                self.xml_parse(html: result)
+            } else {
+                print(error)
+            }
+        })
+        task.resume()
+    }
+    
+    func xml_parse( html: String){
+        if let doc = try? XMLDocument(string: html) {
+            if let root = doc.root {
+                print(root.tag)
+                
+                // define a prefix for a namespace
+                doc.definePrefix("rss", defaultNamespace: "http://backend.userland.com/blogChannelModule")
+                
+                // get first child element with given tag in namespace(optional)
+                print(root.firstChild(tag: "title", inNamespace: "rss"))
+                
+                // iterate through all children
+                for element in root.children {
+                    print("\(index) \(element.tag): \(element.attributes)")
+                }
+            }
+
         }
     }
     
-    func parserDidEndDocument(_ parser: XMLParser) {
-        self.items = [];
-    }
-    
-    func parser(_ parser: XMLParser, didStartElement elementName: String, namespaceURI: String?, qualifiedName qName: String?, attributes attributeDict: [String : String] = [:]) {
-        
-    }
 }

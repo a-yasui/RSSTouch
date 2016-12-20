@@ -10,13 +10,14 @@
 		DA954E981E08F430007F1DA2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA954E971E08F430007F1DA2 /* AppDelegate.swift */; };
 		DA954E9A1E08F430007F1DA2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA954E991E08F430007F1DA2 /* ViewController.swift */; };
 		DA954E9C1E08F430007F1DA2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA954E9B1E08F430007F1DA2 /* Assets.xcassets */; };
-		DA954E9F1E08F430007F1DA2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA954E9D1E08F430007F1DA2 /* Main.storyboard */; };
 		DA954EAA1E08F430007F1DA2 /* TouchRSSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA954EA91E08F430007F1DA2 /* TouchRSSTests.swift */; };
 		DA954EB51E08F430007F1DA2 /* TouchRSSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA954EB41E08F430007F1DA2 /* TouchRSSUITests.swift */; };
 		DA954EC31E08F548007F1DA2 /* RSSThread.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA954EC21E08F548007F1DA2 /* RSSThread.swift */; };
 		DA954ED21E08FC6B007F1DA2 /* Fuzi.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA954ECF1E08FC61007F1DA2 /* Fuzi.framework */; };
 		DA954ED31E08FC6B007F1DA2 /* Fuzi.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DA954ECF1E08FC61007F1DA2 /* Fuzi.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		DA954EDC1E08FD9F007F1DA2 /* Model in Resources */ = {isa = PBXBuildFile; fileRef = DA954EDB1E08FD9F007F1DA2 /* Model */; };
+		DACC25321E090922004B7624 /* Application.xib in Resources */ = {isa = PBXBuildFile; fileRef = DACC25311E090922004B7624 /* Application.xib */; };
+		DACC25391E090C4F004B7624 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = DACC25381E090C4F004B7624 /* icon.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -76,7 +77,6 @@
 		DA954E971E08F430007F1DA2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DA954E991E08F430007F1DA2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		DA954E9B1E08F430007F1DA2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		DA954E9E1E08F430007F1DA2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DA954EA01E08F430007F1DA2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DA954EA51E08F430007F1DA2 /* TouchRSSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TouchRSSTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA954EA91E08F430007F1DA2 /* TouchRSSTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TouchRSSTests.swift; sourceTree = "<group>"; };
@@ -88,6 +88,8 @@
 		DA954EC71E08FBFA007F1DA2 /* libxml2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libxml2.tbd; path = usr/lib/libxml2.tbd; sourceTree = SDKROOT; };
 		DA954EC91E08FC61007F1DA2 /* Fuzi.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Fuzi.xcodeproj; path = Carthage/Checkouts/Fuzi/Fuzi.xcodeproj; sourceTree = "<group>"; };
 		DA954EDB1E08FD9F007F1DA2 /* Model */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Model; sourceTree = "<group>"; };
+		DACC25311E090922004B7624 /* Application.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Application.xib; sourceTree = "<group>"; };
+		DACC25381E090C4F004B7624 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -144,10 +146,11 @@
 				DA954E971E08F430007F1DA2 /* AppDelegate.swift */,
 				DA954E991E08F430007F1DA2 /* ViewController.swift */,
 				DA954E9B1E08F430007F1DA2 /* Assets.xcassets */,
-				DA954E9D1E08F430007F1DA2 /* Main.storyboard */,
 				DA954EA01E08F430007F1DA2 /* Info.plist */,
 				DA954EDB1E08FD9F007F1DA2 /* Model */,
 				DA954EC21E08F548007F1DA2 /* RSSThread.swift */,
+				DACC25311E090922004B7624 /* Application.xib */,
+				DACC25381E090C4F004B7624 /* icon.png */,
 			);
 			path = TouchRSS;
 			sourceTree = "<group>";
@@ -322,9 +325,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DACC25391E090C4F004B7624 /* icon.png in Resources */,
+				DACC25321E090922004B7624 /* Application.xib in Resources */,
 				DA954EDC1E08FD9F007F1DA2 /* Model in Resources */,
 				DA954E9C1E08F430007F1DA2 /* Assets.xcassets in Resources */,
-				DA954E9F1E08F430007F1DA2 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -391,22 +395,11 @@
 		};
 /* End PBXTargetDependency section */
 
-/* Begin PBXVariantGroup section */
-		DA954E9D1E08F430007F1DA2 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				DA954E9E1E08F430007F1DA2 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
-
 /* Begin XCBuildConfiguration section */
 		DA954EB71E08F430007F1DA2 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
+				ALWAYS_SEARCH_USER_PATHS = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
@@ -455,7 +448,7 @@
 		DA954EB81E08F430007F1DA2 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
+				ALWAYS_SEARCH_USER_PATHS = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
@@ -497,13 +490,16 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = B2KMNWG28G;
+				HEADER_SEARCH_PATHS = "$(SDKROOT)/usr/include/libxml2";
 				INFOPLIST_FILE = TouchRSS/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = jp.designegg.mac.TouchRSS;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_INCLUDE_PATHS = "";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -512,13 +508,16 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = B2KMNWG28G;
+				HEADER_SEARCH_PATHS = "$(SDKROOT)/usr/include/libxml2";
 				INFOPLIST_FILE = TouchRSS/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = jp.designegg.mac.TouchRSS;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_INCLUDE_PATHS = "";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
