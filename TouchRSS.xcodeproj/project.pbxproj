@@ -13,6 +13,9 @@
 		DA954E9F1E08F430007F1DA2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA954E9D1E08F430007F1DA2 /* Main.storyboard */; };
 		DA954EAA1E08F430007F1DA2 /* TouchRSSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA954EA91E08F430007F1DA2 /* TouchRSSTests.swift */; };
 		DA954EB51E08F430007F1DA2 /* TouchRSSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA954EB41E08F430007F1DA2 /* TouchRSSUITests.swift */; };
+		DA954EC31E08F548007F1DA2 /* RSSThread.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA954EC21E08F548007F1DA2 /* RSSThread.swift */; };
+		DA954ED21E08FC6B007F1DA2 /* Fuzi.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA954ECF1E08FC61007F1DA2 /* Fuzi.framework */; };
+		DA954ED31E08FC6B007F1DA2 /* Fuzi.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DA954ECF1E08FC61007F1DA2 /* Fuzi.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -30,7 +33,42 @@
 			remoteGlobalIDString = DA954E931E08F430007F1DA2;
 			remoteInfo = TouchRSS;
 		};
+		DA954ECE1E08FC61007F1DA2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DA954EC91E08FC61007F1DA2 /* Fuzi.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 792500AB1BA6CF6B0011671B;
+			remoteInfo = Fuzi;
+		};
+		DA954ED01E08FC61007F1DA2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DA954EC91E08FC61007F1DA2 /* Fuzi.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 792500B71BA6CFBB0011671B;
+			remoteInfo = FuziTests;
+		};
+		DA954ED41E08FC6B007F1DA2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DA954EC91E08FC61007F1DA2 /* Fuzi.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 792500AA1BA6CF6B0011671B;
+			remoteInfo = Fuzi;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		DA954ED61E08FC6B007F1DA2 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				DA954ED31E08FC6B007F1DA2 /* Fuzi.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		DA954E941E08F430007F1DA2 /* TouchRSS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TouchRSS.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -45,6 +83,9 @@
 		DA954EB01E08F430007F1DA2 /* TouchRSSUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TouchRSSUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA954EB41E08F430007F1DA2 /* TouchRSSUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TouchRSSUITests.swift; sourceTree = "<group>"; };
 		DA954EB61E08F430007F1DA2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DA954EC21E08F548007F1DA2 /* RSSThread.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RSSThread.swift; sourceTree = "<group>"; };
+		DA954EC71E08FBFA007F1DA2 /* libxml2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libxml2.tbd; path = usr/lib/libxml2.tbd; sourceTree = SDKROOT; };
+		DA954EC91E08FC61007F1DA2 /* Fuzi.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Fuzi.xcodeproj; path = Carthage/Checkouts/Fuzi/Fuzi.xcodeproj; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +93,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DA954ED21E08FC6B007F1DA2 /* Fuzi.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -75,10 +117,12 @@
 		DA954E8B1E08F430007F1DA2 = {
 			isa = PBXGroup;
 			children = (
+				DA954EC91E08FC61007F1DA2 /* Fuzi.xcodeproj */,
 				DA954E961E08F430007F1DA2 /* TouchRSS */,
 				DA954EA81E08F430007F1DA2 /* TouchRSSTests */,
 				DA954EB31E08F430007F1DA2 /* TouchRSSUITests */,
 				DA954E951E08F430007F1DA2 /* Products */,
+				DA954EC61E08FBFA007F1DA2 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -100,6 +144,7 @@
 				DA954E9B1E08F430007F1DA2 /* Assets.xcassets */,
 				DA954E9D1E08F430007F1DA2 /* Main.storyboard */,
 				DA954EA01E08F430007F1DA2 /* Info.plist */,
+				DA954EC21E08F548007F1DA2 /* RSSThread.swift */,
 			);
 			path = TouchRSS;
 			sourceTree = "<group>";
@@ -122,6 +167,23 @@
 			path = TouchRSSUITests;
 			sourceTree = "<group>";
 		};
+		DA954EC61E08FBFA007F1DA2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DA954EC71E08FBFA007F1DA2 /* libxml2.tbd */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DA954ECA1E08FC61007F1DA2 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DA954ECF1E08FC61007F1DA2 /* Fuzi.framework */,
+				DA954ED11E08FC61007F1DA2 /* FuziTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -132,10 +194,12 @@
 				DA954E901E08F430007F1DA2 /* Sources */,
 				DA954E911E08F430007F1DA2 /* Frameworks */,
 				DA954E921E08F430007F1DA2 /* Resources */,
+				DA954ED61E08FC6B007F1DA2 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				DA954ED51E08FC6B007F1DA2 /* PBXTargetDependency */,
 			);
 			name = TouchRSS;
 			productName = TouchRSS;
@@ -218,6 +282,12 @@
 			mainGroup = DA954E8B1E08F430007F1DA2;
 			productRefGroup = DA954E951E08F430007F1DA2 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = DA954ECA1E08FC61007F1DA2 /* Products */;
+					ProjectRef = DA954EC91E08FC61007F1DA2 /* Fuzi.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				DA954E931E08F430007F1DA2 /* TouchRSS */,
@@ -226,6 +296,23 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		DA954ECF1E08FC61007F1DA2 /* Fuzi.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Fuzi.framework;
+			remoteRef = DA954ECE1E08FC61007F1DA2 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		DA954ED11E08FC61007F1DA2 /* FuziTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = FuziTests.xctest;
+			remoteRef = DA954ED01E08FC61007F1DA2 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		DA954E921E08F430007F1DA2 /* Resources */ = {
@@ -260,6 +347,7 @@
 			files = (
 				DA954E9A1E08F430007F1DA2 /* ViewController.swift in Sources */,
 				DA954E981E08F430007F1DA2 /* AppDelegate.swift in Sources */,
+				DA954EC31E08F548007F1DA2 /* RSSThread.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -291,6 +379,11 @@
 			isa = PBXTargetDependency;
 			target = DA954E931E08F430007F1DA2 /* TouchRSS */;
 			targetProxy = DA954EB11E08F430007F1DA2 /* PBXContainerItemProxy */;
+		};
+		DA954ED51E08FC6B007F1DA2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Fuzi;
+			targetProxy = DA954ED41E08FC6B007F1DA2 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -399,6 +492,7 @@
 		DA954EBA1E08F430007F1DA2 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = B2KMNWG28G;
@@ -413,6 +507,7 @@
 		DA954EBB1E08F430007F1DA2 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = B2KMNWG28G;
