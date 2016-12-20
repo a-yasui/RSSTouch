@@ -9,9 +9,42 @@
 import Foundation
 import Fuzi
 
+
+/**
+ * TouchBar に表示させる内容
+ */
+class Item : NSObject
+{
+    var title:String = "";
+    var url:URL;
+    
+    init(title: String, url: URL) {
+        self.title = title;
+        self.url = url;
+        
+        super.init()
+    }
+    
+    func getTitle() -> String{
+        return self.title;
+    }
+    
+    func getURL() -> URL{
+        return self.url;
+    }
+}
+
+protocol RSSThreadDelegate {
+    func notify(rssThread: RSSThread)
+}
+
+/**
+ */
 class RSSThread: NSObject, XMLParserDelegate {
     
-    var items: Array<String>;
+    var items: Array<Item>;
+    
+    var delegate: RSSThreadDelegate?
     
     override init() {
         self.items = [];
@@ -19,41 +52,62 @@ class RSSThread: NSObject, XMLParserDelegate {
         super.init()
     }
     
-    func parse (url: URL)
+    
+    
+    func parse (_ url: URL)
     {
-        let request = NSMutableURLRequest(url: url)
-        
-        // set the method(HTTP-GET)
-        request.httpMethod = "GET"
-        
-        // use NSURLSessionDataTask
-        let task = URLSession.shared.dataTask(with: request as URLRequest, completionHandler: { data, response, error in
-            if (error == nil) {
-                let result: String = String(data: data!, encoding: String.Encoding(rawValue: String.Encoding.utf8.rawValue))!
-                print(result)
-                
-                self.xml_parse(html: result)
-            } else {
-                print(error)
-            }
-        })
-        task.resume()
+        DispatchQueue(label:"jp.designegg.mac.queue.rssfetch").async {
+            
+            let request = NSMutableURLRequest(url: url)
+            
+            // set the method(HTTP-GET)
+            request.httpMethod = "GET"
+            
+            // use NSURLSessionDataTask
+            let task = URLSession.shared.dataTask(with: request as URLRequest, completionHandler: { data, response, error in
+                if (error == nil) {
+                    let result: String = String(data: data!, encoding: String.Encoding(rawValue: String.Encoding.utf8.rawValue))!
+//                    NSLog(result)
+                    
+                    self.xml_parse(html: result)
+                } else {
+                    NSLog("\(error)")
+                }
+            })
+            task.resume()
+        }
     }
+    
+    func add_item(title:String, link: String){
+        self.items.append(Item(title: title, url: URL(string: link)!))
+    }
+    
     
     func xml_parse( html: String){
         if let doc = try? XMLDocument(string: html) {
             if let root = doc.root {
-                print(root.tag)
                 
                 // define a prefix for a namespace
-                doc.definePrefix("rss", defaultNamespace: "http://backend.userland.com/blogChannelModule")
+//                doc.definePrefix("rss", defaultNamespace: "http://backend.userland.com/blogChannelModule")
                 
-                // get first child element with given tag in namespace(optional)
-                print(root.firstChild(tag: "title", inNamespace: "rss"))
-                
+                let rss = root.xpath("/rss//item/*")
+                NSLog("Item: \(rss.count)")
+
                 // iterate through all children
-                for element in root.children {
-                    print("\(index) \(element.tag): \(element.attributes)")
+                var title = ""
+                
+                for element in rss{
+                    if(element.tag == "title") {
+                        title = element.stringValue
+                    } else if (element.tag == "link"){
+                        self.add_item(title: title, link: element.stringValue)
+                    }
+                    NSLog("Elements \(element.tag): \(element.attributes)")
+                }
+                
+                NSLog("\(self.items)")
+                if (self.delegate != nil) {
+                    self.delegate!.notify(rssThread: self)
                 }
             }
 

@@ -13,11 +13,12 @@
 		DA954EAA1E08F430007F1DA2 /* TouchRSSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA954EA91E08F430007F1DA2 /* TouchRSSTests.swift */; };
 		DA954EB51E08F430007F1DA2 /* TouchRSSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA954EB41E08F430007F1DA2 /* TouchRSSUITests.swift */; };
 		DA954EC31E08F548007F1DA2 /* RSSThread.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA954EC21E08F548007F1DA2 /* RSSThread.swift */; };
-		DA954ED21E08FC6B007F1DA2 /* Fuzi.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA954ECF1E08FC61007F1DA2 /* Fuzi.framework */; };
-		DA954ED31E08FC6B007F1DA2 /* Fuzi.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DA954ECF1E08FC61007F1DA2 /* Fuzi.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		DA954EDC1E08FD9F007F1DA2 /* Model in Resources */ = {isa = PBXBuildFile; fileRef = DA954EDB1E08FD9F007F1DA2 /* Model */; };
 		DACC25321E090922004B7624 /* Application.xib in Resources */ = {isa = PBXBuildFile; fileRef = DACC25311E090922004B7624 /* Application.xib */; };
 		DACC25391E090C4F004B7624 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = DACC25381E090C4F004B7624 /* icon.png */; };
+		DACC253B1E091C33004B7624 /* rss.xml in Resources */ = {isa = PBXBuildFile; fileRef = DACC253A1E091C33004B7624 /* rss.xml */; };
+		DACC25681E0924DC004B7624 /* Fuzi.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DACC25651E0924CD004B7624 /* Fuzi.framework */; };
+		DACC25691E09259A004B7624 /* Fuzi.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DACC25651E0924CD004B7624 /* Fuzi.framework */; };
+		DACC256A1E09259A004B7624 /* Fuzi.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DACC25651E0924CD004B7624 /* Fuzi.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,23 +36,23 @@
 			remoteGlobalIDString = DA954E931E08F430007F1DA2;
 			remoteInfo = TouchRSS;
 		};
-		DA954ECE1E08FC61007F1DA2 /* PBXContainerItemProxy */ = {
+		DACC25641E0924CD004B7624 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = DA954EC91E08FC61007F1DA2 /* Fuzi.xcodeproj */;
+			containerPortal = DACC255F1E0924CD004B7624 /* Fuzi.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 792500AB1BA6CF6B0011671B;
 			remoteInfo = Fuzi;
 		};
-		DA954ED01E08FC61007F1DA2 /* PBXContainerItemProxy */ = {
+		DACC25661E0924CD004B7624 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = DA954EC91E08FC61007F1DA2 /* Fuzi.xcodeproj */;
+			containerPortal = DACC255F1E0924CD004B7624 /* Fuzi.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 792500B71BA6CFBB0011671B;
 			remoteInfo = FuziTests;
 		};
-		DA954ED41E08FC6B007F1DA2 /* PBXContainerItemProxy */ = {
+		DACC256B1E09259A004B7624 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = DA954EC91E08FC61007F1DA2 /* Fuzi.xcodeproj */;
+			containerPortal = DACC255F1E0924CD004B7624 /* Fuzi.xcodeproj */;
 			proxyType = 1;
 			remoteGlobalIDString = 792500AA1BA6CF6B0011671B;
 			remoteInfo = Fuzi;
@@ -65,7 +66,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				DA954ED31E08FC6B007F1DA2 /* Fuzi.framework in Embed Frameworks */,
+				DACC256A1E09259A004B7624 /* Fuzi.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -85,11 +86,10 @@
 		DA954EB41E08F430007F1DA2 /* TouchRSSUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TouchRSSUITests.swift; sourceTree = "<group>"; };
 		DA954EB61E08F430007F1DA2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DA954EC21E08F548007F1DA2 /* RSSThread.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RSSThread.swift; sourceTree = "<group>"; };
-		DA954EC71E08FBFA007F1DA2 /* libxml2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libxml2.tbd; path = usr/lib/libxml2.tbd; sourceTree = SDKROOT; };
-		DA954EC91E08FC61007F1DA2 /* Fuzi.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Fuzi.xcodeproj; path = Carthage/Checkouts/Fuzi/Fuzi.xcodeproj; sourceTree = "<group>"; };
-		DA954EDB1E08FD9F007F1DA2 /* Model */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Model; sourceTree = "<group>"; };
 		DACC25311E090922004B7624 /* Application.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Application.xib; sourceTree = "<group>"; };
 		DACC25381E090C4F004B7624 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
+		DACC253A1E091C33004B7624 /* rss.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = rss.xml; sourceTree = "<group>"; };
+		DACC255F1E0924CD004B7624 /* Fuzi.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Fuzi.xcodeproj; path = Carthage/Checkouts/Fuzi/Fuzi.xcodeproj; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,7 +97,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DA954ED21E08FC6B007F1DA2 /* Fuzi.framework in Frameworks */,
+				DACC25691E09259A004B7624 /* Fuzi.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -105,6 +105,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DACC25681E0924DC004B7624 /* Fuzi.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -121,12 +122,11 @@
 		DA954E8B1E08F430007F1DA2 = {
 			isa = PBXGroup;
 			children = (
-				DA954EC91E08FC61007F1DA2 /* Fuzi.xcodeproj */,
 				DA954E961E08F430007F1DA2 /* TouchRSS */,
 				DA954EA81E08F430007F1DA2 /* TouchRSSTests */,
 				DA954EB31E08F430007F1DA2 /* TouchRSSUITests */,
 				DA954E951E08F430007F1DA2 /* Products */,
-				DA954EC61E08FBFA007F1DA2 /* Frameworks */,
+				DACC255E1E0924CD004B7624 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -147,7 +147,6 @@
 				DA954E991E08F430007F1DA2 /* ViewController.swift */,
 				DA954E9B1E08F430007F1DA2 /* Assets.xcassets */,
 				DA954EA01E08F430007F1DA2 /* Info.plist */,
-				DA954EDB1E08FD9F007F1DA2 /* Model */,
 				DA954EC21E08F548007F1DA2 /* RSSThread.swift */,
 				DACC25311E090922004B7624 /* Application.xib */,
 				DACC25381E090C4F004B7624 /* icon.png */,
@@ -160,6 +159,7 @@
 			children = (
 				DA954EA91E08F430007F1DA2 /* TouchRSSTests.swift */,
 				DA954EAB1E08F430007F1DA2 /* Info.plist */,
+				DACC253A1E091C33004B7624 /* rss.xml */,
 			);
 			path = TouchRSSTests;
 			sourceTree = "<group>";
@@ -173,19 +173,19 @@
 			path = TouchRSSUITests;
 			sourceTree = "<group>";
 		};
-		DA954EC61E08FBFA007F1DA2 /* Frameworks */ = {
+		DACC255E1E0924CD004B7624 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				DA954EC71E08FBFA007F1DA2 /* libxml2.tbd */,
+				DACC255F1E0924CD004B7624 /* Fuzi.xcodeproj */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		DA954ECA1E08FC61007F1DA2 /* Products */ = {
+		DACC25601E0924CD004B7624 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				DA954ECF1E08FC61007F1DA2 /* Fuzi.framework */,
-				DA954ED11E08FC61007F1DA2 /* FuziTests.xctest */,
+				DACC25651E0924CD004B7624 /* Fuzi.framework */,
+				DACC25671E0924CD004B7624 /* FuziTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -205,7 +205,7 @@
 			buildRules = (
 			);
 			dependencies = (
-				DA954ED51E08FC6B007F1DA2 /* PBXTargetDependency */,
+				DACC256C1E09259A004B7624 /* PBXTargetDependency */,
 			);
 			name = TouchRSS;
 			productName = TouchRSS;
@@ -290,8 +290,8 @@
 			projectDirPath = "";
 			projectReferences = (
 				{
-					ProductGroup = DA954ECA1E08FC61007F1DA2 /* Products */;
-					ProjectRef = DA954EC91E08FC61007F1DA2 /* Fuzi.xcodeproj */;
+					ProductGroup = DACC25601E0924CD004B7624 /* Products */;
+					ProjectRef = DACC255F1E0924CD004B7624 /* Fuzi.xcodeproj */;
 				},
 			);
 			projectRoot = "";
@@ -304,18 +304,18 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
-		DA954ECF1E08FC61007F1DA2 /* Fuzi.framework */ = {
+		DACC25651E0924CD004B7624 /* Fuzi.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
 			path = Fuzi.framework;
-			remoteRef = DA954ECE1E08FC61007F1DA2 /* PBXContainerItemProxy */;
+			remoteRef = DACC25641E0924CD004B7624 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		DA954ED11E08FC61007F1DA2 /* FuziTests.xctest */ = {
+		DACC25671E0924CD004B7624 /* FuziTests.xctest */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.cfbundle;
 			path = FuziTests.xctest;
-			remoteRef = DA954ED01E08FC61007F1DA2 /* PBXContainerItemProxy */;
+			remoteRef = DACC25661E0924CD004B7624 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
@@ -327,7 +327,6 @@
 			files = (
 				DACC25391E090C4F004B7624 /* icon.png in Resources */,
 				DACC25321E090922004B7624 /* Application.xib in Resources */,
-				DA954EDC1E08FD9F007F1DA2 /* Model in Resources */,
 				DA954E9C1E08F430007F1DA2 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -336,6 +335,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DACC253B1E091C33004B7624 /* rss.xml in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -388,10 +388,10 @@
 			target = DA954E931E08F430007F1DA2 /* TouchRSS */;
 			targetProxy = DA954EB11E08F430007F1DA2 /* PBXContainerItemProxy */;
 		};
-		DA954ED51E08FC6B007F1DA2 /* PBXTargetDependency */ = {
+		DACC256C1E09259A004B7624 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = Fuzi;
-			targetProxy = DA954ED41E08FC6B007F1DA2 /* PBXContainerItemProxy */;
+			targetProxy = DACC256B1E09259A004B7624 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -436,6 +436,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "$(SDKROOT)/usr/include/libxml2";
 				MACOSX_DEPLOYMENT_TARGET = 10.12;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -479,6 +480,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "$(SDKROOT)/usr/include/libxml2";
 				MACOSX_DEPLOYMENT_TARGET = 10.12;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = macosx;
@@ -529,6 +531,10 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = B2KMNWG28G;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/Mac",
+				);
 				INFOPLIST_FILE = TouchRSSTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = jp.designegg.mac.TouchRSSTests;
@@ -545,6 +551,10 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = B2KMNWG28G;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/Mac",
+				);
 				INFOPLIST_FILE = TouchRSSTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = jp.designegg.mac.TouchRSSTests;

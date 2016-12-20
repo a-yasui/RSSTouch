@@ -1,0 +1,72 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<rss xmlns:blogChannel="http://backend.userland.com/blogChannelModule" version="2.0">
+    <channel>
+        <title>Yahoo!ニュース・トピックス - コンピュータ</title>
+        <link>http://headlines.yahoo.co.jp/hl?c=c_sci</link>
+        <description>Yahoo! JAPANのニュース・トピックスで取り上げている最新の見出しを提供しています。</description>
+        <language>ja</language>
+        <pubDate>Tue, 20 Dec 2016 16:57:26 +0900</pubDate>
+        <item>
+            <title>サイバー防衛 ネット演習検討</title>
+            <link>http://news.yahoo.co.jp/pickup/6224671</link>
+            <pubDate>Tue, 20 Dec 2016 08:30:49 +0900</pubDate>
+            <guid isPermaLink="false">yahoo/news/topics/6224671</guid>
+        </item>
+        <item>
+            <title>石巻ポケGO企画 10万人訪問</title>
+            <link>http://news.yahoo.co.jp/pickup/6224631</link>
+            <pubDate>Mon, 19 Dec 2016 21:10:41 +0900</pubDate>
+            <enclosure length="133" url="http://i.yimg.jp/images/icon/photo.gif" type="image/gif">
+            </enclosure>
+            <guid isPermaLink="false">yahoo/news/topics/6224631</guid>
+        </item>
+        <item>
+            <title>NEC AIを活用した創薬に参入</title>
+            <link>http://news.yahoo.co.jp/pickup/6224603</link>
+            <pubDate>Mon, 19 Dec 2016 16:28:23 +0900</pubDate>
+            <enclosure length="133" url="http://i.yimg.jp/images/icon/photo.gif" type="image/gif">
+            </enclosure>
+            <guid isPermaLink="false">yahoo/news/topics/6224603</guid>
+        </item>
+        <item>
+            <title>WELQ寄稿者 中間業者に怒り</title>
+            <link>http://news.yahoo.co.jp/pickup/6224516</link>
+            <pubDate>Sun, 18 Dec 2016 17:13:52 +0900</pubDate>
+            <enclosure length="133" url="http://i.yimg.jp/images/icon/photo.gif" type="image/gif">
+            </enclosure>
+            <guid isPermaLink="false">yahoo/news/topics/6224516</guid>
+        </item>
+        <item>
+            <title>Vine終了 機能部分的に命拾い</title>
+            <link>http://news.yahoo.co.jp/pickup/6224509</link>
+            <pubDate>Sun, 18 Dec 2016 15:59:00 +0900</pubDate>
+            <enclosure length="133" url="http://i.yimg.jp/images/icon/photo.gif" type="image/gif">
+            </enclosure>
+            <guid isPermaLink="false">yahoo/news/topics/6224509</guid>
+        </item>
+        <item>
+            <title>三國無双 オープンワールドに</title>
+            <link>http://news.yahoo.co.jp/pickup/6224450</link>
+            <pubDate>Sat, 17 Dec 2016 22:31:40 +0900</pubDate>
+            <enclosure length="133" url="http://i.yimg.jp/images/icon/photo.gif" type="image/gif">
+            </enclosure>
+            <guid isPermaLink="false">yahoo/news/topics/6224450</guid>
+        </item>
+        <item>
+            <title>社会変える Change.orgの軌跡</title>
+            <link>http://news.yahoo.co.jp/pickup/6224441</link>
+            <pubDate>Sat, 17 Dec 2016 20:48:56 +0900</pubDate>
+            <enclosure length="133" url="http://i.yimg.jp/images/icon/photo.gif" type="image/gif">
+            </enclosure>
+            <guid isPermaLink="false">yahoo/news/topics/6224441</guid>
+        </item>
+        <item>
+            <title>Amazon激安バグ 注文は有効?</title>
+            <link>http://news.yahoo.co.jp/pickup/6224429</link>
+            <pubDate>Sat, 17 Dec 2016 16:52:27 +0900</pubDate>
+            <enclosure length="133" url="http://i.yimg.jp/images/icon/photo.gif" type="image/gif">
+            </enclosure>
+            <guid isPermaLink="false">yahoo/news/topics/6224429</guid>
+        </item>
+    </channel>
+</rss>

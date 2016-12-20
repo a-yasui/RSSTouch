@@ -6,6 +6,7 @@
 //  Copyright © 2016年 At Yasui. All rights reserved.
 //
 
+import Fuzi
 import XCTest
 @testable import TouchRSS
 
@@ -21,9 +22,19 @@ class TouchRSSTests: XCTestCase {
         super.tearDown()
     }
     
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    func test_xml_parse() {
+        let path = Bundle.path(forResource: "rss", ofType: "xml", inDirectory: "")
+        
+        if path == nil {
+            print("WTF!!??")
+            return;
+        }
+        
+        let xml:String = try! String.init(contentsOfFile: path!)
+        
+        let thread = RSSThread()
+        
+        thread.xml_parse(html: xml)
     }
     
     func testPerformanceExample() {
