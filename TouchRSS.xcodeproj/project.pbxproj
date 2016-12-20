@@ -16,6 +16,7 @@
 		DA954EC31E08F548007F1DA2 /* RSSThread.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA954EC21E08F548007F1DA2 /* RSSThread.swift */; };
 		DA954ED21E08FC6B007F1DA2 /* Fuzi.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA954ECF1E08FC61007F1DA2 /* Fuzi.framework */; };
 		DA954ED31E08FC6B007F1DA2 /* Fuzi.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DA954ECF1E08FC61007F1DA2 /* Fuzi.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		DA954EDC1E08FD9F007F1DA2 /* Model in Resources */ = {isa = PBXBuildFile; fileRef = DA954EDB1E08FD9F007F1DA2 /* Model */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -86,6 +87,7 @@
 		DA954EC21E08F548007F1DA2 /* RSSThread.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RSSThread.swift; sourceTree = "<group>"; };
 		DA954EC71E08FBFA007F1DA2 /* libxml2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libxml2.tbd; path = usr/lib/libxml2.tbd; sourceTree = SDKROOT; };
 		DA954EC91E08FC61007F1DA2 /* Fuzi.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Fuzi.xcodeproj; path = Carthage/Checkouts/Fuzi/Fuzi.xcodeproj; sourceTree = "<group>"; };
+		DA954EDB1E08FD9F007F1DA2 /* Model */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Model; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -144,6 +146,7 @@
 				DA954E9B1E08F430007F1DA2 /* Assets.xcassets */,
 				DA954E9D1E08F430007F1DA2 /* Main.storyboard */,
 				DA954EA01E08F430007F1DA2 /* Info.plist */,
+				DA954EDB1E08FD9F007F1DA2 /* Model */,
 				DA954EC21E08F548007F1DA2 /* RSSThread.swift */,
 			);
 			path = TouchRSS;
@@ -319,6 +322,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DA954EDC1E08FD9F007F1DA2 /* Model in Resources */,
 				DA954E9C1E08F430007F1DA2 /* Assets.xcassets in Resources */,
 				DA954E9F1E08F430007F1DA2 /* Main.storyboard in Resources */,
 			);
@@ -600,6 +604,7 @@
 				DA954EBB1E08F430007F1DA2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		DA954EBC1E08F430007F1DA2 /* Build configuration list for PBXNativeTarget "TouchRSSTests" */ = {
 			isa = XCConfigurationList;
@@ -608,6 +613,7 @@
 				DA954EBE1E08F430007F1DA2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		DA954EBF1E08F430007F1DA2 /* Build configuration list for PBXNativeTarget "TouchRSSUITests" */ = {
 			isa = XCConfigurationList;
@@ -616,6 +622,7 @@
 				DA954EC11E08F430007F1DA2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
