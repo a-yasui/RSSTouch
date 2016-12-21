@@ -73,10 +73,11 @@ extension ViewController {
     func makeButton (x: Int, text:String, url:URL) ->NSView {
         let attributeText = NSMutableAttributedString(string: text)
 
-        let field = NSTextField(frame: NSRect(x: x, y: 0, width: 30, height: 30))
+        let field = TRTextField(frame: NSRect(x: x, y: 0, width: 30, height: 30))
         
         let attr = [
-            NSLinkAttributeName: url,
+//            NSLinkAttributeName: url,
+            :
         ] as [String : Any]
         
         attributeText.beginEditing()
@@ -84,11 +85,11 @@ extension ViewController {
         attributeText.addAttributes(attr, range: range)
         attributeText.endEditing()
         
-        let test = NSMutableAttributedString(string:"|")
+        let test = NSMutableAttributedString(string:"")
         
         test.beginEditing()
         test.append(attributeText)
-        test.append(NSAttributedString(string: "|"))
+        test.append(NSAttributedString(string: ""))
         let attr1 = [
             NSForegroundColorAttributeName: NSColor.orange,
             NSStrikethroughColorAttributeName: NSColor.orange,
@@ -107,9 +108,11 @@ extension ViewController {
         field.isEditable = false
         field.isSelectable = false
         field.textColor = NSColor.orange
-        field.action = #selector(ViewController.clickEvent(_:))
         field.sizeToFit()
         
+        field.wantsLayer = true
+        field.allowedTouchTypes = .direct
+
         return field
     }
     
