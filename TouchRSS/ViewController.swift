@@ -8,20 +8,6 @@
 
 import Cocoa
 
-extension NSMutableAttributedString {
-    public convenience init(string: String, url:URL){
-        self.init(string: string)
-        let range = NSRange(location: 0, length: self.length)
-        
-        self.beginEditing()
-        self.addAttribute(NSLinkAttributeName, value: url.absoluteString, range: range)
-        self.addAttribute(NSForegroundColorAttributeName, value: NSColor.white, range: range)
-        self.addAttribute(NSStrokeColorAttributeName, value: NSColor.white, range: range)
-        
-        self.endEditing()
-    }
-}
-
 @available(OSX 10.12.2, *)
 class ViewController: NSViewController, RSSThreadDelegate {
     var thread: RSSThread = RSSThread()
@@ -33,8 +19,6 @@ class ViewController: NSViewController, RSSThreadDelegate {
     }
 
     override func viewDidAppear() {
-        NSLog("test!!")
-    
         lane.frame = CGRect(x: 0, y: 0, width: self.view.frame.width*2, height: self.view.frame.height)
         lane.layer?.position = CGPoint(x: 0, y: 0)
         self.view.addSubview(lane)
@@ -53,7 +37,9 @@ class ViewController: NSViewController, RSSThreadDelegate {
         }
     }
     
-    
+    /**
+     * くるくる回す部分
+     */
     func start() {
         NSLog("lane width:\(self.lane.frame.width) view width:\(self.view.frame.width)")
 
@@ -72,16 +58,58 @@ class ViewController: NSViewController, RSSThreadDelegate {
     }
 }
 
+@available(OSX 10.12.2, *)
+extension ViewController
+{
+    @IBAction func clickEvent(_ sender:AnyObject)
+    {
+        NSLog("Sender: \(sender)")
+    }
+    
+}
 
 @available(OSX 10.12.2, *)
 extension ViewController {
     func makeButton (x: Int, text:String, url:URL) ->NSView {
-        let text = NSMutableAttributedString(string: text, url: url)
+        let attributeText = NSMutableAttributedString(string: text)
 
-        let field: NSTextField = NSTextField(frame: NSRect(x: x, y: 0, width: 30, height: 30))
-        field.attributedStringValue = text
-        field.textColor = NSColor.white
+        let field = NSTextField(frame: NSRect(x: x, y: 0, width: 30, height: 30))
+        
+        let attr = [
+            NSLinkAttributeName: url,
+        ] as [String : Any]
+        
+        attributeText.beginEditing()
+        let range = NSRange(location: 0, length: attributeText.length)
+        attributeText.addAttributes(attr, range: range)
+        attributeText.endEditing()
+        
+        let test = NSMutableAttributedString(string:"|")
+        
+        test.beginEditing()
+        test.append(attributeText)
+        test.append(NSAttributedString(string: "|"))
+        let attr1 = [
+            NSForegroundColorAttributeName: NSColor.orange,
+            NSStrikethroughColorAttributeName: NSColor.orange,
+            NSStrokeColorAttributeName: NSColor.orange,
+            NSUnderlineStyleAttributeName: NSUnderlineStyle.styleNone.rawValue,
+            NSFontAttributeName: NSFont(name: "HelveticaNeue-Bold", size: 21.0)!,
+            ] as [String : Any]
+        test.addAttributes(attr1, range: NSRange(location:0, length: test.length))
+        test.endEditing()
+        
+//        field.linkTextAttributes = attr
+        
+        field.attributedStringValue = test
+        field.drawsBackground = false
+        field.isBordered = false
+        field.isEditable = false
+        field.isSelectable = false
+        field.textColor = NSColor.orange
+        field.action = #selector(ViewController.clickEvent(_:))
         field.sizeToFit()
+        
         return field
     }
     

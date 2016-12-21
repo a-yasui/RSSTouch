@@ -19,6 +19,7 @@
 		DACC25681E0924DC004B7624 /* Fuzi.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DACC25651E0924CD004B7624 /* Fuzi.framework */; };
 		DACC25691E09259A004B7624 /* Fuzi.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DACC25651E0924CD004B7624 /* Fuzi.framework */; };
 		DACC256A1E09259A004B7624 /* Fuzi.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DACC25651E0924CD004B7624 /* Fuzi.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		DACC25721E0A3569004B7624 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DACC25711E0A3569004B7624 /* MainViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -90,6 +91,7 @@
 		DACC25381E090C4F004B7624 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
 		DACC253A1E091C33004B7624 /* rss.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = rss.xml; sourceTree = "<group>"; };
 		DACC255F1E0924CD004B7624 /* Fuzi.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Fuzi.xcodeproj; path = Carthage/Checkouts/Fuzi/Fuzi.xcodeproj; sourceTree = "<group>"; };
+		DACC25711E0A3569004B7624 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -150,6 +152,7 @@
 				DA954EC21E08F548007F1DA2 /* RSSThread.swift */,
 				DACC25311E090922004B7624 /* Application.xib */,
 				DACC25381E090C4F004B7624 /* icon.png */,
+				DACC25711E0A3569004B7624 /* MainViewController.swift */,
 			);
 			path = TouchRSS;
 			sourceTree = "<group>";
@@ -356,6 +359,7 @@
 				DA954E9A1E08F430007F1DA2 /* ViewController.swift in Sources */,
 				DA954E981E08F430007F1DA2 /* AppDelegate.swift in Sources */,
 				DA954EC31E08F548007F1DA2 /* RSSThread.swift in Sources */,
+				DACC25721E0A3569004B7624 /* MainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

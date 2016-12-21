@@ -58,7 +58,7 @@ extension AppDelegate: NSTouchBarDelegate {
     func makePrimaryTouchBar() -> NSTouchBar {
         let mainBar = NSTouchBar()
         mainBar.delegate = self
-        mainBar.defaultItemIdentifiers = [.flexibleSpace , .rss]
+        mainBar.defaultItemIdentifiers = [.rss]
         return mainBar
     }
     

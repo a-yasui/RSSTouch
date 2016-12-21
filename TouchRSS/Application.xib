@@ -15,6 +15,12 @@
         <customObject id="-3" userLabel="Application" customClass="NSObject"/>
         <customObject id="gh8-UR-zUa" customClass="AppDelegate" customModule="TouchRSS" customModuleProvider="target"/>
         <customObject id="YLy-65-1bz" customClass="NSFontManager"/>
+        <viewController title="MainViewController" id="7Yv-Tu-jpE" customClass="MainViewController" customModule="TouchRSS" customModuleProvider="target">
+            <connections>
+                <outlet property="sourceItemView" destination="se5-gp-TjO" id="xHT-mf-Cjl"/>
+                <outlet property="view" destination="se5-gp-TjO" id="nuw-ya-wHf"/>
+            </connections>
+        </viewController>
         <menu title="Main Menu" systemMenu="main" id="AYu-sK-qS6">
             <items>
                 <menuItem title="NewApplication" id="1Xt-HY-uBw">
@@ -684,6 +690,17 @@
             <view key="contentView" wantsLayer="YES" id="se5-gp-TjO">
                 <rect key="frame" x="0.0" y="0.0" width="480" height="270"/>
                 <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s4X-BI-feR">
+                        <rect key="frame" x="18" y="233" width="444" height="17"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="http://headlines.yahoo.co.jp/rss/all-dom.xml" id="iXc-gU-ghV">
+                            <font key="font" metaFont="system"/>
+                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
+                </subviews>
             </view>
             <connections>
                 <outlet property="delegate" destination="gh8-UR-zUa" id="fDI-Ba-XxP"/>
