@@ -86,10 +86,6 @@ class RSSThread: NSObject, XMLParserDelegate {
     func xml_parse( html: String){
         if let doc = try? XMLDocument(string: html) {
             if let root = doc.root {
-                
-                // define a prefix for a namespace
-//                doc.definePrefix("rss", defaultNamespace: "http://backend.userland.com/blogChannelModule")
-                
                 let rss = root.xpath("/rss//item/*")
                 NSLog("Item: \(rss.count)")
 

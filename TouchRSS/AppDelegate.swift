@@ -48,20 +48,28 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSMenuDelegate, NSTouchBarPr
     }
 }
 
+fileprivate extension NSTouchBarItemIdentifier {
+    static let rss = NSTouchBarItemIdentifier("jp.designegg.mac.touchbar.start")
+}
+
 @available(OSX 10.12.2, *)
 extension AppDelegate: NSTouchBarDelegate {
     
     func makePrimaryTouchBar() -> NSTouchBar {
         let mainBar = NSTouchBar()
         mainBar.delegate = self
-        mainBar.defaultItemIdentifiers = [NSTouchBarItemIdentifier("jp.designegg.mac.touchbar.start")]
+        mainBar.defaultItemIdentifiers = [.flexibleSpace , .rss]
         return mainBar
     }
     
     func touchBar(_ touchBar: NSTouchBar, makeItemForIdentifier identifier: NSTouchBarItemIdentifier) -> NSTouchBarItem? {
-        let item = NSCustomTouchBarItem(identifier: identifier)
-        item.viewController = ViewController()
-        return item
+        if (identifier == .rss){
+            let item = NSCustomTouchBarItem(identifier: identifier)
+            item.viewController = ViewController()
+            return item
+        }
+        NSLog("Identifier: \(identifier)")
+        return nil
     }
 
 }

@@ -40,7 +40,11 @@ class ViewController: NSViewController, RSSThreadDelegate {
         self.view.addSubview(lane)
         
         self.thread.delegate = self
-        self.thread.parse(URL(string: "http://news.yahoo.co.jp/pickup/computer/rss.xml")!)
+        self.load_of_rss(url: URL(string: "http://headlines.yahoo.co.jp/rss/all-dom.xml")!)
+    }
+    
+    func load_of_rss (url: URL){
+        self.thread.parse(url)
     }
 
     override var representedObject: Any? {
@@ -55,7 +59,7 @@ class ViewController: NSViewController, RSSThreadDelegate {
 
         let animation = CABasicAnimation(keyPath: "position")
         animation.repeatCount = .infinity
-        animation.duration = 16
+        animation.duration = CFTimeInterval(self.view.frame.width / 100)
         animation.fromValue = lane.layer?.position
         animation.toValue = NSValue(point: NSPoint(x: -self.view.frame.width, y: 0))
         lane.layer?.add(animation, forKey: "position")
@@ -72,16 +76,13 @@ class ViewController: NSViewController, RSSThreadDelegate {
 @available(OSX 10.12.2, *)
 extension ViewController {
     func makeButton (x: Int, text:String, url:URL) ->NSView {
-        let button : NSButton = NSButton(frame: NSRect(x: x, y: 0, width: 30, height: 30))
-        
         let text = NSMutableAttributedString(string: text, url: url)
-        
-        button.attributedTitle = text
-//        button.identifier = url.absoluteString
-//        button.action = Selector("click:")
-        button.sizeToFit()
-        return button
 
+        let field: NSTextField = NSTextField(frame: NSRect(x: x, y: 0, width: 30, height: 30))
+        field.attributedStringValue = text
+        field.textColor = NSColor.white
+        field.sizeToFit()
+        return field
     }
     
     func notify(rssThread: RSSThread) {
@@ -97,8 +98,12 @@ extension ViewController {
                 self.lane.addSubview(btn)
             }
             
-            let f = self.lane.frame
-            self.view.frame = NSRect( x:f.minX, y:f.minY, width: CGFloat(point), height:f.height)
+            let vf = self.view.frame
+            self.view.frame = NSRect( x:vf.minX, y:vf.minY, width: CGFloat(point), height:vf.height)
+            
+            let lf = self.lane.frame
+            self.lane.frame = NSRect( x:lf.minX, y:lf.minY, width: CGFloat(point), height:lf.height)
+
             self.start()
         }
     }
