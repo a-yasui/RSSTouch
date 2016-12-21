@@ -2,7 +2,7 @@
 
 こんな感じ
 
-[Imgur](http://i.imgur.com/HgRxKJF.png)
+![Imgur](http://i.imgur.com/HgRxKJF.png)
 
 # License
 
