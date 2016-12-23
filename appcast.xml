@@ -1,0 +1,18 @@
+<rss xmlns:sparkle="http://www.andymatuschak.org/xml-namespaces/sparkle" xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0">
+  <channel>
+    <title>Clipy changelog</title>
+    <link>https://a-yasui.github.io/RSSTouch/appcast.xml</link>
+    <description>RSSTouch update changelog.</description>
+    <item>
+      <title>RSSTouch 1.0.0</title>
+      <description>
+        <![CDATA[
+          <ul> <li>とりあえず公開</li> </ul>
+        ]]>
+      </description>
+      <pubDate>Sun, 5 July 2015 03:04:00 +0900</pubDate>
+      <sparkle:minimumSystemVersion>10.12.2</sparkle:minimumSystemVersion>
+      <enclosure url="https://https://a-yasui.github.io/RSSTouch/binaries/v1.0.0/TouchRSS.app.zip" sparkle:version="1.0.1" length="20161223" type="application/octet-stream" sparkle:dsaSignature="MCwCFCqO1bSnzfgAerKXYCayDLNolfesAhQDpzZWt5jyoZFOuvIqU3VakniQHg=="/>
+    </item>
+  </channel>
+</rss>
