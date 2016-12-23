@@ -4,15 +4,15 @@
     <link>https://a-yasui.github.io/RSSTouch/appcast.xml</link>
     <description>RSSTouch update changelog.</description>
     <item>
-      <title>RSSTouch 1.0.0</title>
+      <title>RSSTouch 1.0.1</title>
       <description>
         <![CDATA[
-          <ul> <li>とりあえず公開</li> </ul>
+          <ul> <li>自動更新するように</li> </ul>
         ]]>
       </description>
-      <pubDate>Sun, 5 July 2015 03:04:00 +0900</pubDate>
+      <pubDate>Fri, 23 Dec 2016 06:18:26 +0000</pubDate>
       <sparkle:minimumSystemVersion>10.12.2</sparkle:minimumSystemVersion>
-      <enclosure url="https://https://a-yasui.github.io/RSSTouch/binaries/v1.0.0/TouchRSS.app.zip" sparkle:version="1.0.1" length="20161223" type="application/octet-stream" sparkle:dsaSignature="MCwCFCqO1bSnzfgAerKXYCayDLNolfesAhQDpzZWt5jyoZFOuvIqU3VakniQHg=="/>
+      <enclosure url="https://https://a-yasui.github.io/RSSTouch/binaries/v1.0.1/TouchRSS.app.zip" sparkle:version="1.0.1" length="201612231" type="application/octet-stream" sparkle:dsaSignature="MCwCFE1e25vtnamwMPHGAvanN0NnVDNHAhQDUxi+LHGQKMANeic8ZOD0WAcYog=="/>
     </item>
   </channel>
 </rss>
