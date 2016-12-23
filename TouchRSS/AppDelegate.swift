@@ -35,6 +35,12 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSMenuDelegate, NSTouchBarPr
         
         class QuitMenu: NSMenuItem{}
         
+        let aboutItem = NSMenuItem()
+        aboutItem.title = "About"
+        aboutItem.action = #selector(about(sender:))
+        aboutItem.setAccessibilityEnabled(true)
+        menu.addItem(aboutItem)
+        
         let menuItem = QuitMenu()
         menuItem.title = "Quit"
         menuItem.action = #selector(quit(sender:))
@@ -60,6 +66,10 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSMenuDelegate, NSTouchBarPr
 
     func applicationWillTerminate(_ aNotification: Notification) {
         // Insert code here to tear down your application
+    }
+    
+    @IBAction func about(sender:NSButton){
+        NSApplication.shared().orderFrontStandardAboutPanel(sender)
     }
 
     @IBAction func quit(sender: NSButton) {
