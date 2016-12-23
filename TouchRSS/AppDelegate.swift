@@ -7,7 +7,7 @@
 //
 
 import Cocoa
-
+import Sparkle
 
 fileprivate extension NSTouchBarItemIdentifier {
     static let rss = NSTouchBarItemIdentifier("jp.designegg.mac.touchbar.start")
@@ -43,6 +43,18 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSMenuDelegate, NSTouchBarPr
         
         // 初期状態ではメニューが選べないようになるため
         menu.autoenablesItems = false;
+        
+        // 自動更新
+        let updater = SUUpdater.shared()
+        // URL指定
+        let feed = "https://a-yasui.github.io/RSSTouch/appcast.xml"
+        if let feedURL = URL(string: feed) {
+            SUUpdater.shared().feedURL = feedURL as URL!
+        }
+        // 自動アップデートを設定
+        updater?.automaticallyChecksForUpdates = true
+        // 24時間（１日）毎にアップデート確認
+        updater?.updateCheckInterval = 86400
     }
     
 
