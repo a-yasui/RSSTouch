@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DA246AF11E0CEBB200080CD0 /* Sparkle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA246AF01E0CEBB200080CD0 /* Sparkle.framework */; };
+		DA246AF21E0CEBB200080CD0 /* Sparkle.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DA246AF01E0CEBB200080CD0 /* Sparkle.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		DA246AF41E0CEC8500080CD0 /* dsa_pub.pem in Resources */ = {isa = PBXBuildFile; fileRef = DA246AF31E0CEC8500080CD0 /* dsa_pub.pem */; };
 		DA954E981E08F430007F1DA2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA954E971E08F430007F1DA2 /* AppDelegate.swift */; };
 		DA954E9A1E08F430007F1DA2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA954E991E08F430007F1DA2 /* ViewController.swift */; };
 		DA954E9C1E08F430007F1DA2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA954E9B1E08F430007F1DA2 /* Assets.xcassets */; };
@@ -69,6 +72,7 @@
 			dstSubfolderSpec = 10;
 			files = (
 				DACC256A1E09259A004B7624 /* Fuzi.framework in Embed Frameworks */,
+				DA246AF21E0CEBB200080CD0 /* Sparkle.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -76,6 +80,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		DA246AF01E0CEBB200080CD0 /* Sparkle.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Sparkle.framework; path = Carthage/Build/Mac/Sparkle.framework; sourceTree = "<group>"; };
+		DA246AF31E0CEC8500080CD0 /* dsa_pub.pem */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = dsa_pub.pem; sourceTree = "<group>"; };
 		DA954E941E08F430007F1DA2 /* TouchRSS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TouchRSS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA954E971E08F430007F1DA2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DA954E991E08F430007F1DA2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -102,6 +108,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DACC25691E09259A004B7624 /* Fuzi.framework in Frameworks */,
+				DA246AF11E0CEBB200080CD0 /* Sparkle.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -126,6 +133,7 @@
 		DA954E8B1E08F430007F1DA2 = {
 			isa = PBXGroup;
 			children = (
+				DA246AF31E0CEC8500080CD0 /* dsa_pub.pem */,
 				DA954E961E08F430007F1DA2 /* TouchRSS */,
 				DA954EA81E08F430007F1DA2 /* TouchRSSTests */,
 				DA954EB31E08F430007F1DA2 /* TouchRSSUITests */,
@@ -182,6 +190,7 @@
 		DACC255E1E0924CD004B7624 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				DA246AF01E0CEBB200080CD0 /* Sparkle.framework */,
 				DACC255F1E0924CD004B7624 /* Fuzi.xcodeproj */,
 			);
 			name = Frameworks;
@@ -332,6 +341,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DACC25391E090C4F004B7624 /* icon.png in Resources */,
+				DA246AF41E0CEC8500080CD0 /* dsa_pub.pem in Resources */,
 				DACC25321E090922004B7624 /* Application.xib in Resources */,
 				DA954E9C1E08F430007F1DA2 /* Assets.xcassets in Resources */,
 			);
@@ -504,6 +514,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = B2KMNWG28G;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/Mac",
+				);
 				HEADER_SEARCH_PATHS = "$(SDKROOT)/usr/include/libxml2";
 				INFOPLIST_FILE = TouchRSS/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
@@ -522,6 +536,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = B2KMNWG28G;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/Mac",
+				);
 				HEADER_SEARCH_PATHS = "$(SDKROOT)/usr/include/libxml2";
 				INFOPLIST_FILE = TouchRSS/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
