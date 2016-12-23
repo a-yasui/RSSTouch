@@ -1,0 +1,34 @@
+{
+    "docs": [
+        {
+            "location": "/",
+            "text": "Yahoo\u306e\u30cb\u30e5\u30fc\u30b9RSS\u3092TouchBar \u306b\u6d41\u3059\u3060\u3051\u306e\u3084\u3064\n\n\n\u30a2\u30d7\u30ea\u30b1\u30fc\u30b7\u30e7\u30f3\u30d0\u30a4\u30ca\u30ea\u30fc\u306f \nbinary\u30da\u30fc\u30b8\n \u304b\u3089\u30c0\u30a6\u30f3\u30ed\u30fc\u30c9\u3057\u3066\u304f\u3060\u3055\u3044\u3002\n\n\n\u3053\u3093\u306a\u611f\u3058\n\n\n\n\nLicense\n\n\nThe MIT License (MIT)\nCopyright (c) 2016 a.yasui@gmail.com\n\n\nPermission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the \"Software\"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:\n\n\nThe above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.\n\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.",
+            "title": "Home"
+        },
+        {
+            "location": "/#yahoorsstouchbar",
+            "text": "\u30a2\u30d7\u30ea\u30b1\u30fc\u30b7\u30e7\u30f3\u30d0\u30a4\u30ca\u30ea\u30fc\u306f  binary\u30da\u30fc\u30b8  \u304b\u3089\u30c0\u30a6\u30f3\u30ed\u30fc\u30c9\u3057\u3066\u304f\u3060\u3055\u3044\u3002  \u3053\u3093\u306a\u611f\u3058",
+            "title": "Yahoo\u306e\u30cb\u30e5\u30fc\u30b9RSS\u3092TouchBar \u306b\u6d41\u3059\u3060\u3051\u306e\u3084\u3064"
+        },
+        {
+            "location": "/#license",
+            "text": "The MIT License (MIT)\nCopyright (c) 2016 a.yasui@gmail.com  Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the \"Software\"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:  The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.  THE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.",
+            "title": "License"
+        },
+        {
+            "location": "/binary/",
+            "text": "\u30d0\u30a4\u30ca\u30ea\u30fc\n\n\n\n\n\u6700\u65b0\u7248 v1.0.0 \u3092\u30c0\u30a6\u30f3\u30ed\u30fc\u30c9\n\n\n\n\n\u904e\u53bb\u5206\n\n\n\n\nv1.0.0",
+            "title": "binary"
+        },
+        {
+            "location": "/binary/#_1",
+            "text": "\u6700\u65b0\u7248 v1.0.0 \u3092\u30c0\u30a6\u30f3\u30ed\u30fc\u30c9",
+            "title": "\u30d0\u30a4\u30ca\u30ea\u30fc"
+        },
+        {
+            "location": "/binary/#_2",
+            "text": "v1.0.0",
+            "title": "\u904e\u53bb\u5206"
+        }
+    ]
+}
