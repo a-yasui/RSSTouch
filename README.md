@@ -1,6 +1,6 @@
 # YahooのニュースRSSをTouchBar に流すだけのやつ
 
-アプリケーションバイナリーは https://www.dropbox.com/s/p6t6v8san2p5i25/TouchRSS.app.zip?dl=0 からダウンロードできるはず。
+アプリケーションバイナリーは [こちら](http://atys.space/touchrss.github.io/)から
 
 こんな感じ
 
