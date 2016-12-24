@@ -1,6 +1,6 @@
 # YahooのニュースRSSをTouchBar に流すだけのやつ
 
-アプリケーションバイナリーは[http://atys.space/RSSTouch/binary/](http://atys.space/RSSTouch/binary/)からダウンロードできます。 
+アプリケーションバイナリーは[https://a-yasui.github.io/RSSTouch/binary/](https://a-yasui.github.io/RSSTouch/binary/)からダウンロードできます。 
 
 こんな感じ
 
