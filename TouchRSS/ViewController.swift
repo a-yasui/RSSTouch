@@ -121,7 +121,16 @@ extension ViewController {
         DispatchQueue.main.async {
             var point: Int = 0
             for i in 0..<self.item.count {
-                let btn = self.makeButton(x: point, text: self.item[i].getTitle(), url: self.item[i].getURL())
+                
+                // 少ないニュースが先頭に来た時、すぐに隠れてしまうので無理やり表示させる
+                var title:String = ""
+                if i == 0 {
+                    title = "            "
+                }
+                
+                title = title + self.item[i].getTitle()
+                
+                let btn = self.makeButton(x: point, text: title, url: self.item[i].getURL())
                 NSLog("get \(i) => \(self.item[i].getTitle()) at xpoint \(point) width fit: \(btn.frame.size.width)")
 
                 point = point + Int(btn.frame.size.width)
