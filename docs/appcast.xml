@@ -10,9 +10,9 @@
           <ul> <li>自動更新するように</li> </ul>
         ]]>
       </description>
-      <pubDate>Fri, 23 Dec 2016 06:18:26 +0000</pubDate>
+      <pubDate>Tue, 27 Dec 16 11:31:27 +0000</pubDate>
       <sparkle:minimumSystemVersion>10.12.2</sparkle:minimumSystemVersion>
-      <enclosure url="https://https://a-yasui.github.io/RSSTouch/binaries/v1.0.1/TouchRSS.app.zip" sparkle:version="1.0.1" length="201612231" type="application/octet-stream" sparkle:dsaSignature="MCwCFE1e25vtnamwMPHGAvanN0NnVDNHAhQDUxi+LHGQKMANeic8ZOD0WAcYog=="/>
+      <enclosure url="https://https://a-yasui.github.io/RSSTouch/binaries/v1.0.2/TouchRSS.app.zip" sparkle:version="1.0.2" length="201612271" type="application/octet-stream" sparkle:dsaSignature="MC0CFDSXyNkz5eEpCNnKFog7NybtZGc3AhUAiDle/4zyrZTBbaG4EOFMtbtvN7g="/>
     </item>
   </channel>
 </rss>
