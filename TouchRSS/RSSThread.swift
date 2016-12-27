@@ -42,6 +42,8 @@ protocol RSSThreadDelegate {
  */
 class RSSThread: NSObject, XMLParserDelegate {
     
+    let DEFAILT_URL: String = "https://a-yasui.github.io/RSSTouch/"
+    
     var items: Array<Item>;
     
     var delegate: RSSThreadDelegate?
@@ -72,6 +74,10 @@ class RSSThread: NSObject, XMLParserDelegate {
                     self.xml_parse(html: result)
                 } else {
                     NSLog("\(error)")
+                    self.add_item(title: (error?.localizedDescription)!, link: self.DEFAILT_URL)
+                    if (self.delegate != nil) {
+                        self.delegate!.notify(rssThread: self)
+                    }
                 }
             })
             task.resume()
