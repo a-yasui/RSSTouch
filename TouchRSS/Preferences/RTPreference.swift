@@ -8,10 +8,15 @@
 
 import Cocoa
 
-class RTPreference : NSWindow {
+class RTPreference : NSPanel {
+    
+    var config: SharedConfiguration?
     
     override func cancelOperation(_ sender: Any?) {
         self.close()
     }
     
+    func setConfiguration(config: SharedConfiguration){
+        self.config = config
+    }
 }

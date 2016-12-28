@@ -13,6 +13,8 @@ class ViewController: NSViewController, RSSThreadDelegate {
     var thread: RSSThread = RSSThread()
     var item: Array<Item> = []
     let lane = NSView()
+    
+    var config: SharedConfiguration?
 
     override func loadView() {
         self.view = NSView()
@@ -71,6 +73,12 @@ extension ViewController
 @available(OSX 10.12.2, *)
 extension ViewController {
     func makeButton (x: Int, text:String, url:URL) ->NSView {
+        guard let config:SharedConfiguration = self.config else {
+            NSLog("Why not set Config in ViewController !?")
+            return NSView()
+        }
+        
+        let color:NSColor = config.textColor()
         let attributeText = NSMutableAttributedString(string: text)
 
         let field = TRTextField(frame: NSRect(x: x, y: 0, width: 30, height: 30))
@@ -91,11 +99,11 @@ extension ViewController {
         test.append(attributeText)
         test.append(NSAttributedString(string: ""))
         let attr1 = [
-            NSForegroundColorAttributeName: NSColor.orange,
-            NSStrikethroughColorAttributeName: NSColor.orange,
-            NSStrokeColorAttributeName: NSColor.orange,
+            NSForegroundColorAttributeName: color,
+            NSStrikethroughColorAttributeName: color,
+            NSStrokeColorAttributeName: color,
             NSUnderlineStyleAttributeName: NSUnderlineStyle.styleNone.rawValue,
-            NSFontAttributeName: NSFont(name: "HelveticaNeue-Bold", size: 21.0)!,
+            NSFontAttributeName: config.font(),
             ] as [String : Any]
         test.addAttributes(attr1, range: NSRange(location:0, length: test.length))
         test.endEditing()
@@ -107,7 +115,7 @@ extension ViewController {
         field.isBordered = false
         field.isEditable = false
         field.isSelectable = false
-        field.textColor = NSColor.orange
+        field.textColor = color
         field.sizeToFit()
         
         field.wantsLayer = true

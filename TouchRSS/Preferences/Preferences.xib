@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+    <dependencies>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="11762"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="RTPreferenceController" customModule="TouchRSS" customModuleProvider="target">
+            <connections>
+                <outlet property="toolbar" destination="PQB-51-k2x" id="Lqg-wx-QjE"/>
+                <outlet property="window" destination="QvC-M9-y7g" id="yqu-fm-i46"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <window title="Window" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" hidesOnDeactivate="YES" oneShot="NO" releasedWhenClosed="NO" frameAutosaveName="preferencesPanel" animationBehavior="default" id="QvC-M9-y7g" customClass="RTPreference" customModule="TouchRSS" customModuleProvider="target">
+            <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES"/>
+            <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
+            <rect key="contentRect" x="50" y="589" width="480" height="270"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="1440" height="900"/>
+            <view key="contentView" wantsLayer="YES" id="EiT-Mj-1SZ">
+                <rect key="frame" x="0.0" y="0.0" width="480" height="270"/>
+                <autoresizingMask key="autoresizingMask"/>
+            </view>
+            <toolbar key="toolbar" implicitIdentifier="65F1C81B-157E-4B12-8BDE-4CB50A96D193" autosavesConfiguration="NO" displayMode="iconAndLabel" sizeMode="regular" id="PQB-51-k2x">
+                <allowedToolbarItems>
+                    <toolbarItem implicitItemIdentifier="C8431D5B-9B2B-4060-97A9-0125D66E50C3" explicitItemIdentifier="RTUpdateItem" label="Update" paletteLabel="Update" image="NSNetwork" id="CWU-fb-1e1">
+                        <connections>
+                            <action selector="switchView:" target="-2" id="k35-iU-dCW"/>
+                        </connections>
+                    </toolbarItem>
+                    <toolbarItem implicitItemIdentifier="NSToolbarShowColorsItem" id="q55-Bc-lJF"/>
+                    <toolbarItem implicitItemIdentifier="NSToolbarShowFontsItem" id="G8O-8l-N5i"/>
+                    <toolbarItem implicitItemIdentifier="NSToolbarPrintItem" id="g2Q-c3-Oqt"/>
+                    <toolbarItem implicitItemIdentifier="NSToolbarSpaceItem" id="Zkd-Vj-nva"/>
+                    <toolbarItem implicitItemIdentifier="NSToolbarFlexibleSpaceItem" id="kmY-l9-hUv"/>
+                </allowedToolbarItems>
+                <defaultToolbarItems>
+                    <toolbarItem reference="CWU-fb-1e1"/>
+                    <toolbarItem reference="q55-Bc-lJF"/>
+                    <toolbarItem reference="G8O-8l-N5i"/>
+                    <toolbarItem reference="kmY-l9-hUv"/>
+                    <toolbarItem reference="g2Q-c3-Oqt"/>
+                </defaultToolbarItems>
+            </toolbar>
+        </window>
+        <userDefaultsController representsSharedInstance="YES" id="aco-ID-V5Z"/>
+    </objects>
+    <resources>
+        <image name="NSNetwork" width="32" height="32"/>
+    </resources>
+</document>
