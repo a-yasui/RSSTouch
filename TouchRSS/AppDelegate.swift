@@ -63,6 +63,10 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSMenuDelegate, NSTouchBarPr
         updater?.updateCheckInterval = 86400
     }
     
+    @IBAction func openPreference(_ sender: Any) {
+        let shared = RTPreferenceController.share;
+        shared.showWindow(sender)
+    }
 
     func applicationWillTerminate(_ aNotification: Notification) {
         // Insert code here to tear down your application

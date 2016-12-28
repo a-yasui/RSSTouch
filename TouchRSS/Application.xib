@@ -34,7 +34,11 @@
                                 </connections>
                             </menuItem>
                             <menuItem isSeparatorItem="YES" id="VOq-y0-SEH"/>
-                            <menuItem title="Preferences…" keyEquivalent="," id="BOF-NM-1cW"/>
+                            <menuItem title="Preferences…" keyEquivalent="," id="BOF-NM-1cW">
+                                <connections>
+                                    <action selector="openPreference:" target="gh8-UR-zUa" id="tCJ-Pq-DLX"/>
+                                </connections>
+                            </menuItem>
                             <menuItem isSeparatorItem="YES" id="wFC-TO-SCJ"/>
                             <menuItem title="Services" id="NMo-om-nkz">
                                 <modifierMask key="keyEquivalentModifierMask"/>
@@ -130,5 +134,6 @@
                 <outlet property="delegate" destination="gh8-UR-zUa" id="fDI-Ba-XxP"/>
             </connections>
         </window>
+        <menuItem title="Preferences…" keyEquivalent="," id="e6D-af-AnQ"/>
     </objects>
 </document>
