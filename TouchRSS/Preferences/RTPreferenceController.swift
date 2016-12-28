@@ -61,6 +61,8 @@ class RTPreferenceController : NSWindowController
         let frame = window!.frame
         var newFrame = window!.frameRect(forContentRect: newView.frame)
         newFrame.origin = frame.origin
+        newFrame.origin.y += frame.height - newFrame.height
+        
         window?.setFrame(newFrame, display: true)
         window?.contentView?.addSubview(newView)
     }
