@@ -27,7 +27,7 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSMenuDelegate, NSTouchBarPr
         
         self.touchBar = makePrimaryTouchBar()
         
-        self.config = SharedConfiguration()
+        self.config = SharedConfiguration.shared
         
         // メニュー
         let menu = NSMenu()

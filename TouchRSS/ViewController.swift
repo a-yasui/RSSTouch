@@ -72,13 +72,14 @@ extension ViewController
 
 @available(OSX 10.12.2, *)
 extension ViewController {
-    func makeButton (x: Int, text:String, url:URL) ->NSView {
+    func makeButton (x: Int, item:Item) ->NSView {
         guard let config:SharedConfiguration = self.config else {
             NSLog("Why not set Config in ViewController !?")
             return NSView()
         }
-        
-        let color:NSColor = config.textColor()
+
+        let text:String = item.getTitle()
+        let color:NSColor = item.getColor()
         let attributeText = NSMutableAttributedString(string: text)
 
         let field = TRTextField(frame: NSRect(x: x, y: 0, width: 30, height: 30))
@@ -128,17 +129,16 @@ extension ViewController {
         self.item = rssThread.items;
         DispatchQueue.main.async {
             var point: Int = 0
+            NSLog("self.view width: \(self.view.frame.width)")
+            
+            let MarginSpaceView: NSView = NSView()
+            MarginSpaceView.frame = NSRect( x:0, y:0, width: self.view.frame.width, height:self.view.frame.height )
+            self.lane.addSubview( MarginSpaceView )
+            
+            point = Int(self.view.frame.width)
+            
             for i in 0..<self.item.count {
-                
-                // 少ないニュースが先頭に来た時、すぐに隠れてしまうので無理やり表示させる
-                var title:String = ""
-                if i == 0 {
-                    title = "            "
-                }
-                
-                title = title + self.item[i].getTitle()
-                
-                let btn = self.makeButton(x: point, text: title, url: self.item[i].getURL())
+                let btn = self.makeButton(x: point, item:self.item[i] )
                 NSLog("get \(i) => \(self.item[i].getTitle()) at xpoint \(point) width fit: \(btn.frame.size.width)")
 
                 point = point + Int(btn.frame.size.width)
