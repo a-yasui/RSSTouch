@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DA01E1ED1E13A93500436F90 /* SharedConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA01E1EC1E13A93500436F90 /* SharedConfiguration.swift */; };
+		DA01E1EF1E13C48500436F90 /* RTPreferenceUpdateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA01E1EE1E13C48500436F90 /* RTPreferenceUpdateViewController.swift */; };
+		DA01E1F21E13C4CE00436F90 /* RTPreferenceUpdateViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DA01E1F11E13C4CE00436F90 /* RTPreferenceUpdateViewController.xib */; };
+		DA01E1F61E13C5B600436F90 /* Preferences.xib in Resources */ = {isa = PBXBuildFile; fileRef = DA01E1F31E13C5B600436F90 /* Preferences.xib */; };
+		DA01E1F71E13C5B600436F90 /* RTPreference.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA01E1F41E13C5B600436F90 /* RTPreference.swift */; };
+		DA01E1F81E13C5B600436F90 /* RTPreferenceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA01E1F51E13C5B600436F90 /* RTPreferenceController.swift */; };
 		DA246AF11E0CEBB200080CD0 /* Sparkle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA246AF01E0CEBB200080CD0 /* Sparkle.framework */; };
 		DA246AF21E0CEBB200080CD0 /* Sparkle.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DA246AF01E0CEBB200080CD0 /* Sparkle.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		DA246AF41E0CEC8500080CD0 /* dsa_pub.pem in Resources */ = {isa = PBXBuildFile; fileRef = DA246AF31E0CEC8500080CD0 /* dsa_pub.pem */; };
@@ -22,7 +28,6 @@
 		DACC25681E0924DC004B7624 /* Fuzi.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DACC25651E0924CD004B7624 /* Fuzi.framework */; };
 		DACC25691E09259A004B7624 /* Fuzi.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DACC25651E0924CD004B7624 /* Fuzi.framework */; };
 		DACC256A1E09259A004B7624 /* Fuzi.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DACC25651E0924CD004B7624 /* Fuzi.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		DACC25721E0A3569004B7624 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DACC25711E0A3569004B7624 /* MainViewController.swift */; };
 		DACC25741E0A4755004B7624 /* TRTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = DACC25731E0A4755004B7624 /* TRTextField.swift */; };
 /* End PBXBuildFile section */
 
@@ -80,6 +85,12 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		DA01E1EC1E13A93500436F90 /* SharedConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SharedConfiguration.swift; sourceTree = "<group>"; };
+		DA01E1EE1E13C48500436F90 /* RTPreferenceUpdateViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RTPreferenceUpdateViewController.swift; path = Preferences/Updater/RTPreferenceUpdateViewController.swift; sourceTree = "<group>"; };
+		DA01E1F11E13C4CE00436F90 /* RTPreferenceUpdateViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = RTPreferenceUpdateViewController.xib; path = Preferences/Updater/RTPreferenceUpdateViewController.xib; sourceTree = "<group>"; };
+		DA01E1F31E13C5B600436F90 /* Preferences.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = Preferences.xib; path = Preferences/Preferences.xib; sourceTree = "<group>"; };
+		DA01E1F41E13C5B600436F90 /* RTPreference.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RTPreference.swift; path = Preferences/RTPreference.swift; sourceTree = "<group>"; };
+		DA01E1F51E13C5B600436F90 /* RTPreferenceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RTPreferenceController.swift; path = Preferences/RTPreferenceController.swift; sourceTree = "<group>"; };
 		DA246AF01E0CEBB200080CD0 /* Sparkle.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Sparkle.framework; path = Carthage/Build/Mac/Sparkle.framework; sourceTree = "<group>"; };
 		DA246AF31E0CEC8500080CD0 /* dsa_pub.pem */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = dsa_pub.pem; sourceTree = "<group>"; };
 		DA954E941E08F430007F1DA2 /* TouchRSS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TouchRSS.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -98,7 +109,6 @@
 		DACC25381E090C4F004B7624 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
 		DACC253A1E091C33004B7624 /* rss.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = rss.xml; sourceTree = "<group>"; };
 		DACC255F1E0924CD004B7624 /* Fuzi.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Fuzi.xcodeproj; path = Carthage/Checkouts/Fuzi/Fuzi.xcodeproj; sourceTree = "<group>"; };
-		DACC25711E0A3569004B7624 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		DACC25731E0A4755004B7624 /* TRTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TRTextField.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -130,6 +140,36 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DA01E1EA1E13A8E200436F90 /* Preferences */ = {
+			isa = PBXGroup;
+			children = (
+				DA01E1F31E13C5B600436F90 /* Preferences.xib */,
+				DA01E1F41E13C5B600436F90 /* RTPreference.swift */,
+				DA01E1F51E13C5B600436F90 /* RTPreferenceController.swift */,
+				DA01E1F01E13C48900436F90 /* Updater */,
+			);
+			name = Preferences;
+			sourceTree = "<group>";
+		};
+		DA01E1EB1E13A8F000436F90 /* Main Window Group */ = {
+			isa = PBXGroup;
+			children = (
+				DA954E991E08F430007F1DA2 /* ViewController.swift */,
+				DACC25311E090922004B7624 /* Application.xib */,
+				DACC25731E0A4755004B7624 /* TRTextField.swift */,
+			);
+			name = "Main Window Group";
+			sourceTree = "<group>";
+		};
+		DA01E1F01E13C48900436F90 /* Updater */ = {
+			isa = PBXGroup;
+			children = (
+				DA01E1EE1E13C48500436F90 /* RTPreferenceUpdateViewController.swift */,
+				DA01E1F11E13C4CE00436F90 /* RTPreferenceUpdateViewController.xib */,
+			);
+			name = Updater;
+			sourceTree = "<group>";
+		};
 		DA954E8B1E08F430007F1DA2 = {
 			isa = PBXGroup;
 			children = (
@@ -156,14 +196,13 @@
 			isa = PBXGroup;
 			children = (
 				DA954E971E08F430007F1DA2 /* AppDelegate.swift */,
-				DA954E991E08F430007F1DA2 /* ViewController.swift */,
 				DA954E9B1E08F430007F1DA2 /* Assets.xcassets */,
 				DA954EA01E08F430007F1DA2 /* Info.plist */,
 				DA954EC21E08F548007F1DA2 /* RSSThread.swift */,
-				DACC25311E090922004B7624 /* Application.xib */,
+				DA01E1EC1E13A93500436F90 /* SharedConfiguration.swift */,
 				DACC25381E090C4F004B7624 /* icon.png */,
-				DACC25711E0A3569004B7624 /* MainViewController.swift */,
-				DACC25731E0A4755004B7624 /* TRTextField.swift */,
+				DA01E1EB1E13A8F000436F90 /* Main Window Group */,
+				DA01E1EA1E13A8E200436F90 /* Preferences */,
 			);
 			path = TouchRSS;
 			sourceTree = "<group>";
@@ -342,7 +381,9 @@
 			files = (
 				DACC25391E090C4F004B7624 /* icon.png in Resources */,
 				DA246AF41E0CEC8500080CD0 /* dsa_pub.pem in Resources */,
+				DA01E1F21E13C4CE00436F90 /* RTPreferenceUpdateViewController.xib in Resources */,
 				DACC25321E090922004B7624 /* Application.xib in Resources */,
+				DA01E1F61E13C5B600436F90 /* Preferences.xib in Resources */,
 				DA954E9C1E08F430007F1DA2 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -369,11 +410,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DA01E1F81E13C5B600436F90 /* RTPreferenceController.swift in Sources */,
+				DA01E1F71E13C5B600436F90 /* RTPreference.swift in Sources */,
+				DA01E1EF1E13C48500436F90 /* RTPreferenceUpdateViewController.swift in Sources */,
 				DA954E9A1E08F430007F1DA2 /* ViewController.swift in Sources */,
 				DA954E981E08F430007F1DA2 /* AppDelegate.swift in Sources */,
+				DA01E1ED1E13A93500436F90 /* SharedConfiguration.swift in Sources */,
 				DACC25741E0A4755004B7624 /* TRTextField.swift in Sources */,
 				DA954EC31E08F548007F1DA2 /* RSSThread.swift in Sources */,
-				DACC25721E0A3569004B7624 /* MainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

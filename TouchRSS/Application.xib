@@ -15,12 +15,6 @@
         <customObject id="-3" userLabel="Application" customClass="NSObject"/>
         <customObject id="gh8-UR-zUa" customClass="AppDelegate" customModule="TouchRSS" customModuleProvider="target"/>
         <customObject id="YLy-65-1bz" customClass="NSFontManager"/>
-        <viewController title="MainViewController" id="7Yv-Tu-jpE" customClass="MainViewController" customModule="TouchRSS" customModuleProvider="target">
-            <connections>
-                <outlet property="sourceItemView" destination="se5-gp-TjO" id="xHT-mf-Cjl"/>
-                <outlet property="view" destination="se5-gp-TjO" id="nuw-ya-wHf"/>
-            </connections>
-        </viewController>
         <menu title="Main Menu" systemMenu="main" id="AYu-sK-qS6">
             <items>
                 <menuItem title="RSSTouch" id="1Xt-HY-uBw">
@@ -34,7 +28,11 @@
                                 </connections>
                             </menuItem>
                             <menuItem isSeparatorItem="YES" id="VOq-y0-SEH"/>
-                            <menuItem title="Preferences…" keyEquivalent="," id="BOF-NM-1cW"/>
+                            <menuItem title="Preferences…" keyEquivalent="," id="BOF-NM-1cW">
+                                <connections>
+                                    <action selector="openPreference:" target="gh8-UR-zUa" id="tCJ-Pq-DLX"/>
+                                </connections>
+                            </menuItem>
                             <menuItem isSeparatorItem="YES" id="wFC-TO-SCJ"/>
                             <menuItem title="Services" id="NMo-om-nkz">
                                 <modifierMask key="keyEquivalentModifierMask"/>
@@ -130,5 +128,6 @@
                 <outlet property="delegate" destination="gh8-UR-zUa" id="fDI-Ba-XxP"/>
             </connections>
         </window>
+        <menuItem title="Preferences…" keyEquivalent="," id="e6D-af-AnQ"/>
     </objects>
 </document>

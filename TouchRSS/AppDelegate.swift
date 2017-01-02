@@ -21,11 +21,13 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSMenuDelegate, NSTouchBarPr
 
     var statusItem = NSStatusBar.system().statusItem(withLength: -1)
     var touchBar: NSTouchBar?
-
+    var config: SharedConfiguration?
     
     func applicationDidFinishLaunching(_ aNotification: Notification) {
         
         self.touchBar = makePrimaryTouchBar()
+        
+        self.config = SharedConfiguration()
         
         // メニュー
         let menu = NSMenu()
@@ -63,6 +65,11 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSMenuDelegate, NSTouchBarPr
         updater?.updateCheckInterval = 86400
     }
     
+    @IBAction func openPreference(_ sender: Any) {
+        let shared = RTPreferenceController.share;
+        shared.config = self.config
+        shared.showWindow(sender)
+    }
 
     func applicationWillTerminate(_ aNotification: Notification) {
         // Insert code here to tear down your application
@@ -95,7 +102,9 @@ extension AppDelegate: NSTouchBarDelegate {
     func touchBar(_ touchBar: NSTouchBar, makeItemForIdentifier identifier: NSTouchBarItemIdentifier) -> NSTouchBarItem? {
         if (identifier == .rss){
             let item = NSCustomTouchBarItem(identifier: identifier)
-            item.viewController = ViewController()
+            let viewController = ViewController()
+            viewController.config = self.config
+            item.viewController = viewController
             return item
         } else if (identifier == .weblink) {
             let custom = NSCustomTouchBarItem(identifier: identifier)
