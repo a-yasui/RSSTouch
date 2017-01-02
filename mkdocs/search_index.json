@@ -17,17 +17,17 @@
         },
         {
             "location": "/binary/",
-            "text": "\u30d0\u30a4\u30ca\u30ea\u30fc\n\n\n\n\n\u6700\u65b0\u7248 v1.0.2 \u3092\u30c0\u30a6\u30f3\u30ed\u30fc\u30c9\n\n\n\n\n\u904e\u53bb\u5206\n\n\n\n\nv1.0.2\n\n\nv1.0.1\n\n\nv1.0.0",
+            "text": "\u30d0\u30a4\u30ca\u30ea\u30fc\n\n\n\n\n\u6700\u65b0\u7248 v1.0.4 \u3092\u30c0\u30a6\u30f3\u30ed\u30fc\u30c9\n\n\n\n\n\u904e\u53bb\u5206\n\n\n\n\nv1.0.4\n\n\nv1.0.2\n\n\nv1.0.1\n\n\nv1.0.0",
             "title": "binary"
         },
         {
             "location": "/binary/#_1",
-            "text": "\u6700\u65b0\u7248 v1.0.2 \u3092\u30c0\u30a6\u30f3\u30ed\u30fc\u30c9",
+            "text": "\u6700\u65b0\u7248 v1.0.4 \u3092\u30c0\u30a6\u30f3\u30ed\u30fc\u30c9",
             "title": "\u30d0\u30a4\u30ca\u30ea\u30fc"
         },
         {
             "location": "/binary/#_2",
-            "text": "v1.0.2  v1.0.1  v1.0.0",
+            "text": "v1.0.4  v1.0.2  v1.0.1  v1.0.0",
             "title": "\u904e\u53bb\u5206"
         }
     ]
