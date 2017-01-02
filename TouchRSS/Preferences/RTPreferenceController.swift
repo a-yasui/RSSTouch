@@ -10,7 +10,7 @@ import Cocoa
 
 class RTPreferenceController : NSWindowController
 {
-    @IBOutlet var toolbar: NSToolbar?
+    @IBOutlet weak var toolbar: NSToolbar!
     
     var config: SharedConfiguration?
     
@@ -35,9 +35,13 @@ class RTPreferenceController : NSWindowController
             return
         }
         
-        if self.window is RTPreference {
-            (self.window! as! RTPreference).config = config
+        if let window = self.window {
+            if self.window is RTPreference {
+                (window as! RTPreference).config = config
+            }
         }
+        
+        _switchView(index: 0)
     }
     
     // MARK: -- Actions

@@ -30,18 +30,12 @@
                             <action selector="switchView:" target="-2" id="k35-iU-dCW"/>
                         </connections>
                     </toolbarItem>
-                    <toolbarItem implicitItemIdentifier="NSToolbarShowColorsItem" id="q55-Bc-lJF"/>
-                    <toolbarItem implicitItemIdentifier="NSToolbarShowFontsItem" id="G8O-8l-N5i"/>
-                    <toolbarItem implicitItemIdentifier="NSToolbarPrintItem" id="g2Q-c3-Oqt"/>
                     <toolbarItem implicitItemIdentifier="NSToolbarSpaceItem" id="Zkd-Vj-nva"/>
                     <toolbarItem implicitItemIdentifier="NSToolbarFlexibleSpaceItem" id="kmY-l9-hUv"/>
                 </allowedToolbarItems>
                 <defaultToolbarItems>
                     <toolbarItem reference="CWU-fb-1e1"/>
-                    <toolbarItem reference="q55-Bc-lJF"/>
-                    <toolbarItem reference="G8O-8l-N5i"/>
                     <toolbarItem reference="kmY-l9-hUv"/>
-                    <toolbarItem reference="g2Q-c3-Oqt"/>
                 </defaultToolbarItems>
             </toolbar>
         </window>
