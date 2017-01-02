@@ -13,17 +13,19 @@ class SharedConfiguration : NSObject
 {
     let COLOR = "info.a-yasui.cocoa.touchrss.color"
     let FONT = "info.a-yasui.cocoa.touchrss.font"
-    var defaults: UserDefaults
+    let defaults: UserDefaults = UserDefaults.standard
     
-    override init()
+    static let shared : SharedConfiguration = {
+        let sc = SharedConfiguration()
+        
+        sc.textColor()
+        sc.font()
+        
+        return sc
+    }();
+    
+    fileprivate override init()
     {
-        self.defaults = UserDefaults.standard
-
-        super.init()
-        
-        self.textColor()
-        
-        self.font()
     }
     
     /**

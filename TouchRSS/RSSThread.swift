@@ -8,6 +8,7 @@
 
 import Foundation
 import Fuzi
+import Cocoa
 
 
 /**
@@ -15,12 +16,18 @@ import Fuzi
  */
 class Item : NSObject
 {
-    var title:String = "";
-    var url:URL;
+    private var title:String = "";
+    private var url:URL;
+    private var color: NSColor;
     
-    init(title: String, url: URL) {
-        self.title = title;
-        self.url = url;
+    convenience init(title: String, url: URL) {
+        self.init(title:title, url:url, color:SharedConfiguration.shared.textColor() )
+    }
+    
+    init(title:String, url: URL, color: NSColor){
+        self.title = title
+        self.url = url
+        self.color = color
         
         super.init()
     }
@@ -31,6 +38,10 @@ class Item : NSObject
     
     func getURL() -> URL{
         return self.url;
+    }
+    
+    func getColor() -> NSColor {
+        return self.color
     }
 }
 
@@ -74,7 +85,7 @@ class RSSThread: NSObject, XMLParserDelegate {
                     self.xml_parse(html: result)
                 } else {
                     NSLog("\(error)")
-                    self.add_item(title: (error?.localizedDescription)!, link: self.DEFAILT_URL)
+                    self.add_item(title: (error?.localizedDescription)!, link: self.DEFAILT_URL, color:NSColor.red)
                     if (self.delegate != nil) {
                         self.delegate!.notify(rssThread: self)
                     }
@@ -82,6 +93,10 @@ class RSSThread: NSObject, XMLParserDelegate {
             })
             task.resume()
         }
+    }
+    
+    func add_item(title:String, link:String, color:NSColor){
+        self.items.append(Item(title: title, url: URL(string:link)!, color: color))
     }
     
     func add_item(title:String, link: String){
